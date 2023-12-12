@@ -1,0 +1,20 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: change-config
+#  security:
+#    user:
+#      name: root
+#      password: abc
+#      roles: SUPERUSER
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/ryanjbaxter/beginners-guide-to-spring-cloud
+          searchPaths: beginners-guide-to-spring-cloud-config
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8766/eureka/
